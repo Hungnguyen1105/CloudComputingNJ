@@ -1,0 +1,26 @@
+We are living in {{year}}
+<br>
+{{country}} is a beautiful country 
+<br>
+I am studying at {{university}}
+{{#each music}}
+<ul>
+<li>{{this}}</li>
+</ul>
+{{/each}}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+    </tr>
+    <tr>
+{{#each country }}
+    </tr>
+    <tr>
+        <td>{{this}}</td>
+    </tr>
+    <tr>
+        {{/each}}
+    </tr>
+</table>
+

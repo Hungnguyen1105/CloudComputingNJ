@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "handlebars-dateformat": "^1.1.3"
+  }
+}
