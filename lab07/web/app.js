@@ -35,6 +35,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/student', studentRouter);
 var hbs = require('hbs');
+hbs.registerHelper('equal', require('handlebars-helper-equal'))
 hbs.registerHelper('dateFormat', require('handlebars-dateformat')); 
 
 // catch 404 and forward to error handler
