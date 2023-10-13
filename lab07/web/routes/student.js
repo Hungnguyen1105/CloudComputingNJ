@@ -50,5 +50,19 @@ router.post('/edit/:id', async (req, res) => {
    console.log('Update student succeed !');
    res.redirect('/student');
 })
+router.post('/search', async(req,res)=>{
+   var keyword = req.body.name;
+   var students = await StudentModel.find({name: new RegExp(keyword,"i")});
+   res.render('student/index', {students:students})
+})
+router.get('/nameasc', async(req,res)=>{
+   var students = await StudentModel.find().sort({name: 1})
+   res.render('student/index', {students:students})
 
+})
+router.get('/namedesc', async(req,res)=>{
+   var students = await StudentModel.find().sort({name: -1})
+   res.render('student/index', {students:students})
+
+})
 module.exports = router;
