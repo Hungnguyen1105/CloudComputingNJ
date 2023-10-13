@@ -6,20 +6,30 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-// khai bao router
+//khai báo router
 var studentRouter = require('./routes/student');
 
 var app = express();
-//khai bao body parser
-var bodyPaser = require('body-parser');
-app.use(bodyPaser.urlencoded({extended: false}));
 
-//khia bao va cau hinh mongoose
+//khai báo và cấu hình thư viện dateFormat, equal cho hbs
+var hbs = require('hbs');
+hbs.registerHelper('dateFormat', require('handlebars-dateformat'));
+hbs.registerHelper('equal', require('handlebars-helper-equal'))
+
+
+//khai báo & cấu hình body-parser
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+
+//khai báo & cấu hình mongoose
 var mongoose = require('mongoose');
+//Note: cần khai báo tên db ở cuối uri của connection string
 var uri = "mongodb+srv://hbday2k3:hungnguyen2003@cluster0.f3h6kv6.mongodb.net/gch1105"
+mongoose.set('strictQuery', true);
 mongoose.connect(uri)
-.then(() => console.log('db connect ok'))
-.catch((err) => console.error('db connect failed'));
+  .then(() => console.log('connect to db ok'))
+  .catch((err) => console.log('connect to db error'));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,17 +44,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/student', studentRouter);
-var hbs = require('hbs');
-hbs.registerHelper('equal', require('handlebars-helper-equal'))
-hbs.registerHelper('dateFormat', require('handlebars-dateformat')); 
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -53,9 +60,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-// cau hinh port de deploy len cloud
-app.listen (process.env.PORT||3001);
 
-
+// cấu hình port của server để deploy lên cloud
+app.listen(process.env.PORT || 3001);
 
 module.exports = app;
