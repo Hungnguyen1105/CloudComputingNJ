@@ -19,10 +19,10 @@
                 </form>
             </th>
             <th colspan="2">
-                <select class="form-control" name="sort" id="">
-                    <option value="">Sort by</option>
-                    <option value="/student/name">Name asc</option>
-                    <option value="/student/name"> Name Desc</option>
+                <select class="form-control" name="sort" id="" onchange="window.location.href=this.value">
+                    <option value="#">Sort by</option>
+                    <option value="/student/nameasc">Name asc</option>
+                    <option value="/student/namedesc"> Name Desc</option>
                 </select>
 
             </th>
