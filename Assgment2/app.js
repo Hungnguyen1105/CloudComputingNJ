@@ -6,25 +6,24 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var productRouter = require('./routes/product')
+var homeRouter = require('./routes/home')
+//khai báo & cấu hình body-parser
+var bodyParser = require('body-parser');
+//khai báo & cấu hình mongoose
+var mongoose = require('mongoose');
+//Note: cần khai báo tên db ở cuối uri của connection string
+var uri = "mongodb+srv://hbday2k3:hungnguyen2003@cluster0.f3h6kv6.mongodb.net/assigment"
+mongoose.set('strictQuery', true);
+mongoose.connect(uri)
+  .then(() => console.log('connect to db ok'))
+  .catch((err) => console.log('connect to db error'));
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-var hbs = require('hbs')
-hbs.registerHelper('equal', require('handlebars-helper-equal'))
-hbs.registerHelper('eq', function(a, b) {
-  return a === b;
-});
-hbs.registerHelper('gt', function(a, b) {
-  return a > b;
-});
-hbs.registerHelper('lt', function(a, b) {
-  return a < b;
-});
-
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -34,6 +33,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/product' ,productRouter)
+app.use('/home', homeRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

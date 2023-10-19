@@ -1,0 +1,27 @@
+<form action="/product/edit/{{product._id}}" method="post" class="container col-md-8 card bg-warning mt-3">
+   <h1 class="text-danger text-uppercase text-center mt-3">Edit Product</h1>
+   <div class="form-group mt-3">
+      <label for="Name" class="text-primary">Name</label>
+      <input class="form-control" type="text" name="Name" required minlength="3" maxlength="30" value="{{product.Name}}">
+   </div>
+   <div class="form-group mt-3">
+      <label for="brand" class="text-primary">Brand</label>
+      <input class="form-control" type="text" name="Brand" id="" required value="{{product.Brand}}">
+   </div>
+   <div class="form-group mt-3">
+      <label for="Price" class="text-primary">Price</label>
+      <input class="form-control" type="text" name="Price" id="" required value="{{product.Price}}">
+   </div>
+   <div class="form-group mt-3">
+      <label for="Image" class="text-primary">Image</label>
+      <input class="form-control" type="url" name="Image" required value="{{product.Image}}">
+   </div>
+   <div class="form-group mt-3">
+      <label for="quanity" class="text-primary">Quanity</label>
+      <input class="form-control" type="number" name="quantity" id="" required value="{{product.quantity}}">
+   </div>
+    <div class="form-group mt-3 mb-3 text-center">
+      <input class="btn btn-primary" type="submit" value="Add">
+      <input class="btn btn-success" type="reset" value="Clear">
+   </div>
+</form>
