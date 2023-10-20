@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/product')
 var homeRouter = require('./routes/home')
+var loginRouter = require('./routes/login')
 //khai báo & cấu hình body-parser
 var bodyParser = require('body-parser');
 //khai báo & cấu hình mongoose
@@ -35,6 +36,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/product' ,productRouter)
 app.use('/home', homeRouter);
+app.use('/login', loginRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

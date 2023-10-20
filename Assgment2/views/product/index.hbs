@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Bootstrap User Management Data Table</title>
+    <title></title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -217,61 +218,63 @@
 </head>
 
 <body>
-    <div class="container-xl">
-        <div class="table-responsive">
-            <div class="table-wrapper">
-                <div class="table-title">
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <h2>Admin <b>Management</b></h2>
-                        </div>
-                        <div class="col-sm-7">
-                            <a href="/product/add" class="btn btn-secondary"><i class="material-icons">&#xE147;</i> <span>Add New
-                                    Product</span></a>
+        <div class="container-xl">
+            <div class="table-responsive">
+                <div class="table-wrapper">
+                    <div class="table-title">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <h2>Admin <b>Management</b></h2>
+                            </div>
+                            <div class="col-sm-7">
+                                <a href="/product/add" class="btn btn-secondary"><i class="material-icons">&#xE147;</i>
+                                    <span>Add New
+                                        Product</span></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <table class="table table-striped table-hover">
-                    <thead>
-                        <tr>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
 
-                            <th>Name</th>
-                            <th>Brand</th>
-                            <th>Price</th>
-                            <th>Image</th>
-                            <th>Quantity</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
+                                <th>Name</th>
+                                <th>Brand</th>
+                                <th>Price</th>
+                                <th>Image</th>
+                                <th>Quantity</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-                        {{#each products}}
-                        <tr>
-                            <td>{{ Name }}</td>
-                            <td>{{ Brand }}</td>
-                            <td>{{ Price }}</td>
-                            <td>
-                                <a href="/product/detail/{{ _id }}">
-                                    <img src="{{ Image }}" width="150" height="150">
-                                </a>
-                            </td>
-                            <td>{{ quantity }}</td>
-                            <td>
-                                <a href="/product/edit/{{ _id }}" class="settings" title="Settings"
-                                    data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-                                <a href="/product/delete/{{ _id }}" class="delete" title="Delete"
-                                onclick="return confirm('Are you sure to delete this product ?');"
-                                    data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i>
+                        <tbody>
+                            {{#each products}}
+                            <tr>
+                                <td>{{ Name }}</td>
+                                <td>{{ Brand }}</td>
+                                <td>{{ Price }}</td>
+                                <td>
+                                    <a href="/product/detail/{{ _id }}">
+                                        <img src="{{ Image }}" width="150" height="150">
                                     </a>
-                            </td>
-                        </tr>
-                        {{/each}}
+                                </td>
+                                <td>{{ quantity }}</td>
+                                <td>
+                                    <a href="/product/edit/{{ _id }}" class="settings" title="Settings"
+                                        data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
+                                    <a href="/product/delete/{{ _id }}" class="delete" title="Delete"
+                                        onclick="return confirm('Are you sure to delete this product ?');"
+                                        data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i>
+                                    </a>
+                                </td>
+                            </tr>
+                            {{/each}}
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
 
+                </div>
             </div>
         </div>
-    </div>
 </body>
+
 </html>

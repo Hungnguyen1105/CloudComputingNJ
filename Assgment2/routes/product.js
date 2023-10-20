@@ -6,6 +6,7 @@ router.get('/', async(req,res) =>{
     var products = await ProductModel.find();
     res.render('product/index', {products:products})
 })
+
 router.get('/detail/:id', async (req, res) => {
     var id = req.params.id;
     // SELECT * FROM student WHERE id = 'id'
@@ -41,7 +42,7 @@ router.get('/detail/:id', async (req, res) => {
     var id = req.params.id;
     var product = req.body;
     await ProductModel.findByIdAndUpdate(id, product);
-    console.log('Update student succeed !');
+    console.log('Update product succeed !');
     res.redirect('/product');
  })
  router.post('/search', async(req,res)=>{
