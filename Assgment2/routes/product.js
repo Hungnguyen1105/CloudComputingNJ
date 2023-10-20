@@ -1,10 +1,20 @@
 var express = require('express');
 var router = express.Router();
-const ProductModel = require('../models/ProductModel')
+const ProductModel = require('../models/ProductModel');
+const BearbrickModel = require('../models/BearbrickModel');
+const GokuModel = require('../models/GokuModel');
 
-router.get('/', async(req,res) =>{
-    var products = await ProductModel.find();
-    res.render('product/index', {products:products})
+router.get('/', async (req, res) => {
+   // SQL : SELECT * FROM student
+   var bearbricks = await BearbrickModel.find();
+   var gokus = await GokuModel.find();
+   console.log(bearbricks);
+   //res.send(students);
+   // render ra file view : views/student/index.hbs và gửi kèm data thông qua biến 'students'
+   res.render('product/index', { 
+      bearbricks: bearbricks,
+      gokus: gokus,
+    });
 })
 
 router.get('/detail/:id', async (req, res) => {

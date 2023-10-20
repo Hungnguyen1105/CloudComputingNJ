@@ -1,11 +1,11 @@
 <nav class="nav">
       <i class="uil uil-bars navOpenBtn"></i>
-      <a href="#" class="logo">CodingLab</a>
+      <a href="#" class="logo">Bearbrick</a>
       <ul class="nav-links">
         <i class="uil uil-times navCloseBtn"></i>
         <li><a href="/home">Home</a></li>
-        <li><a href="#">Model</a></li>
-        <li><a href="#">Products</a></li>
+        <li><a href="#">Bearbrick</a></li>
+        <li><a href="#">Goku</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Contact Us</a></li>
       </ul>
@@ -15,60 +15,33 @@
         <input type="text" placeholder="Search here..." />
       </div>
     </nav>
-<div class="container mt-5 mb-5">
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-10">
-            <div class="card">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="images p-3">
-                            <div class="text-center p-4"> <img id="main-image" src="{{product.Image}}" width="400" />
-                                <h1 class="text-uppercase"> {{ product.Name }}</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="product p-4">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-flex align-items-center"> <i class="fa fa-long-arrow-left"></i> <span
-                                        class="ml-1"></span> </div> <i class="fa fa-shopping-cart text-muted"></i>
-                            </div>
-                            <div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand"></span>
-                                <h2 class="text-uppercase">
-                                    </h5>
-                                    <h2 class="text-uppercase"> {{ product.Name }}</h2>
-                                        <h2 class="text-uppercase">{{ product.Brand }}</h2>
-                                            <div class="quantity">
-                                                <button class="decrease">-</button>
-                                                <input type="text" class="quantity-input" value="1">
-                                                <button class="increase">+</button>
-                                                
-                                            </div>
-
-                                            </h5>
-                                            <div class="price d-flex flex-row align-items-center"> <span
-                                                    class="act-price"> <h3>Total:
-                                                    ${{product.Price}}</h3>
-
-                                            </div>
-                            </div>
-                            <div class="cart mt-4 align-items-center"> <button
-                                    class="btn btn-danger text-uppercase mr-2 px-4">Add to cart</button> <i
-                                    class="fa fa-heart text-muted"></i> <i class="fa fa-share-alt text-muted"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                </div>
-            </div>
-        </div>
-</body>
-
-</html>
+<form action="/bearbrick/edit/{{bearbrick._id}}" method="post" class="container col-md-8 card bg-warning mt-3">
+   <h1 class="text-danger text-uppercase text-center mt-3">Edit Product</h1>
+   <div class="form-group mt-3">
+      <label for="Name" class="text-primary">Name</label>
+      <input class="form-control" type="text" name="Name" required minlength="3" maxlength="30" value="{{bearbrick.Name}}">
+   </div>
+   <div class="form-group mt-3">
+      <label for="brand" class="text-primary">Brand</label>
+      <input class="form-control" type="text" name="Brand" id="" required value="{{bearbrick.Brand}}">
+   </div>
+   <div class="form-group mt-3">
+      <label for="Price" class="text-primary">Price</label>
+      <input class="form-control" type="text" name="Price" id="" required value="{{bearbrick.Price}}">
+   </div>
+   <div class="form-group mt-3">
+      <label for="Image" class="text-primary">Image</label>
+      <input class="form-control" type="url" name="Image" required value="{{bearbrick.Image}}">
+   </div>
+   <div class="form-group mt-3">
+      <label for="quanity" class="text-primary">Quanity</label>
+      <input class="form-control" type="number" name="quantity" id="" required value="{{bearbrick.quantity}}">
+   </div>
+    <div class="form-group mt-3 mb-3 text-center">
+      <input class="btn btn-primary" type="submit" value="Add">
+      <input class="btn btn-success" type="reset" value="Clear">
+   </div>
+</form>
 <style>
     /* Google Fonts - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");

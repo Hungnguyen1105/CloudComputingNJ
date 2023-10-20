@@ -1,5 +1,5 @@
 var mongoose = require('mongoose')
-var ProductSchema = mongoose.Schema(
+var GokuSchema = new mongoose.Schema(
     {
         Name: {
             type: String,
@@ -17,5 +17,5 @@ var ProductSchema = mongoose.Schema(
         quantity: Number
     }
 )
-var ProductModel = mongoose.model('product', ProductSchema, 'product');
-module.exports=ProductModel
+var GokuModel = mongoose.model('goku', GokuSchema, 'goku');
+module.exports= GokuModel

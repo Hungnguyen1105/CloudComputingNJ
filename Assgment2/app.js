@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 var productRouter = require('./routes/product')
 var homeRouter = require('./routes/home')
 var loginRouter = require('./routes/login')
+var bearbrickRouter = require('./routes/bearbrick')
+var gokuRouter = require('./routes/goku')
 //khai báo & cấu hình body-parser
 var bodyParser = require('body-parser');
 //khai báo & cấu hình mongoose
@@ -37,7 +39,8 @@ app.use('/users', usersRouter);
 app.use('/product' ,productRouter)
 app.use('/home', homeRouter);
 app.use('/login', loginRouter)
-
+app.use('/bearbrick', bearbrickRouter)
+app.use('/goku', gokuRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

@@ -32,7 +32,7 @@
 </head>
 
 <body>
-   {{!-- <div class="header_section">
+   <div class="header_section">
       <div class="container-fluid">
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="/home"><img height="400" width="400" src="images/logobb.png"></a>
@@ -46,8 +46,15 @@
                      <a class="nav-link" href="/home">Home</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="/model">Model</a>
+                     <a class="nav-link" href="/model">BearBrick</a>
                   </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="/model">GoKu</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="/model">ConTact</a>
+                  </li>
+
                </ul>
                <form class="form-inline my-2 my-lg-0">
                   <div class="login_bt">
@@ -60,7 +67,7 @@
                </form>
             </div>
          </nav>
-      </div> --}}
+      </div>
       <!-- banner section start -->
       <div class="banner_section layout_padding">
          <div class="container">
@@ -119,11 +126,24 @@
                <div class="carousel-item active">
                   <div class="container-fluid">
                      <div class="row">
-                        {{#each products }}
+                        {{#each bearbricks }}
                         <div class="col-lg-3 col-md-6">
                            <h3 class="types_text">{{ Name }}</h3>
                            <div class="bbrick_img">
-                              <a href="/product/detail/{{_id}}"> <img src="{{Image}}"></a>
+                              <a href="/bearbrick/detail/{{_id}}"> <img src="{{Image}}"></a>
+
+                           </div>
+                           <h3 class="types_text">{{ Brand }}</h3>
+                           <h3 class="types_text">$ {{ Price}}</h3>
+                           <div class="read_bt"><a href="">Add To Cart</a></div>
+                        </div>
+                        {{/each}}
+                        
+                             {{#each gokus }}
+                        <div class="col-lg-3 col-md-6">
+                           <h3 class="types_text">{{ Name }}</h3>
+                           <div class="bbrick_img">
+                              <a href="/goku/detail/{{_id}}"> <img src="{{Image}}"></a>
 
                            </div>
                            <h3 class="types_text">{{ Brand }}</h3>
@@ -218,8 +238,7 @@
          <div class="container">
             <div class="row">
                <div class="col-lg-6 col-sm-12">
-                  <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free Html
-                        Templates</a></p>
+                  <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free Html Templates</a></p>
                </div>
                <div class="col-lg-6 col-sm-12">
                   <div class="footer_social_icon">
