@@ -26,7 +26,8 @@ router.get('/detail/:id', async (req, res) => {
  
  router.get('/delete/:id', async (req, res) => {
     var id = req.params.id;
-    await ProductModel.findByIdAndDelete(id);
+    await BearbrickModel.findByIdAndDelete(id);
+    await GokuModel.findByIdAndDelete(id);
     console.log('Delete product succeed');
     res.redirect('/product');
  })
