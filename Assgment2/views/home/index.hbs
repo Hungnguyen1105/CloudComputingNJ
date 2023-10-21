@@ -35,7 +35,7 @@
    <div class="header_section">
       <div class="container-fluid">
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/home"><img height="400" width="400" src="images/logobb.png"></a>
+            <a class="navbar-brand" href="/home"><img height="300" width="250" src="images/logobb.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
@@ -52,7 +52,7 @@
                      <a class="nav-link" href="/#">GoKu</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="/model">ConTact</a>
+                     <a class="nav-link" href="/#">ConTact</a>
                   </li>
 
                </ul>
@@ -102,160 +102,160 @@
                      </div>
                   </div>
                </div>
+               <a class="carousel-control-prev" href="#banner_slider" role="button" data-slide="prev">
+                  <i class="fa fa-arrow-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#banner_slider" role="button" data-slide="next">
+                  <i class="fa fa-arrow-right"></i>
+               </a>
             </div>
          </div>
-         <!-- header section end -->
-         <!-- coffee section start -->
-         <div class="coffee_section layout_padding">
-            <div class="container">
-               <div class="row">
-                  <div class="bulit_icon"><img height="300" width="300" src="images/logobb.png"></div>
-               </div>
-            </div>
-            <div class="bbrick_section_2">
-               <div id="main_slider" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                     <div class="carousel-item active">
-                        <div class="container-fluid">
-                           <div class="row">
-                              {{#each bearbricks }}
-                              <div class="col-lg-3 col-md-6">
-                                 <h3 class="types_text">{{ Name }}</h3>
-                                 <div class="bbrick_img">
-                                    <a href="/bearbrick/detail/{{_id}}"> <img src="{{Image}}"></a>
-
-                                 </div>
-                                 <h3 class="types_text">{{ Brand }}</h3>
-                                 <h3 class="types_text">$ {{ Price}}</h3>
-                                 <div class="read_bt"><a href="">Add To Cart</a></div>
-                              </div>
-                              {{/each}}
-
-                              {{#each gokus }}
-                              <div class="col-lg-3 col-md-6">
-                                 <h3 class="types_text">{{ Name }}</h3>
-                                 <div class="bbrick_img">
-                                    <a href="/goku/detail/{{_id}}"> <img src="{{Image}}"></a>
-
-                                 </div>
-                                 <h3 class="types_text">{{ Brand }}</h3>
-                                 <h3 class="types_text">$ {{ Price}}</h3>
-                                 <div class="read_bt"><a href="">Add To Cart</a></div>
-                              </div>
-                              {{/each}}
-                           </div>
-                        </div>
-                     </div>
-
-                     <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
-                        <i class="fa fa-arrow-left"></i>
-                     </a>
-                     <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
-                        <i class="fa fa-arrow-right"></i>
-                     </a>
-                  </div>
-               </div>
-            </div>
-            <div class="blog_section layout_padding">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <h1 class="about_taital">Introduce Bearbrick</h1>
-                     </div>
-                  </div>
-                  <div class="blog_section_2">
+      </div>
+   </div>
+   <div>
+      <div class="row">
+         <div class="bulit_icon"><img height="200" width="200" src="images/logointro.png"></div>
+      </div>
+      <p class="lorem_text">
+         ✔ Bearbrick is a line of toy products owned by a Japanese company called MediCom Toy. Bearbrick is a compound
+         word of the words "bear" meaning bear and "brick" meaning stone block created to describe the shape of this
+         product. So Bearbrick is a bear made from small square blocks.
+      </p>
+      <p class="lorem_text">
+         ✔ Bearbrick is a type of plastic statue produced in many different sizes, from 50% to 1000% of the original
+         size. Each Bearbrick is designed with a special form and there are many different versions produced by famous
+         artists or fashion houses.
+      </p>
+      <p class="lorem_text">
+         ✔ Bearbrick is a product of MediCom Toy company founded in 1996 in Tokyo, Japan. During that time, the company
+         mainly produced and distributed products such as chibi statues (figurines), cartoon character statues, and
+         products related to Pop Art culture.
+      </p>
+   </div>
+   </div>
+   <div class="coffee_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="bulit_icon"><img height="300" width="300" src="images/logobb.png"></div>
+         </div>
+      </div>
+      <div class="bbrick_section_2">
+         <div id="main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container-fluid">
                      <div class="row">
-                        <div class="col-md-6">
-                           <div class="blog_box">
-                              <div class="blog_img"><img src="images/bb13.png"></div>
-                              <h4 class="prep_text">Bearbrick Jean-Michel</h4>
-                              <p class="lorem_text">
-                                 ✔ Guaranteed 100% genuine, if found fake, refund 2 times the order value
-                                 ✔ Free return and exchange within 45 days (click to see details)
-                                 ✔ Free 1-year warranty on the entire system (click to see details)</p>
-                           </div>
-                           <div class="read_bt"><a href="#">Add To Cart</a></div>
-                        </div>
-                        <div class="col-md-6">
-                           <div class="blog_box">
-                              <div class="blog_img"><img src="images/bb15.png"></div>
-                              <h4 class="prep_text">Bearbrick Oculus Orbus</h4>
-                              <p class="lorem_text">
-                                 ✔ Guaranteed 100% genuine, if found fake, refund 2 times the order value
-                                 ✔ Free return and exchange within 45 days (click to see details)
-                                 ✔ Free 1-year warranty on the entire system (click to see details)</p>
-                           </div>
-                           <div class="read_bt"><a href="#">Add To Cart</a></div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <!-- blog section end -->
-            <!-- contact section start -->
+                        {{#each bearbricks }}
+                        <div class="col-lg-3 col-md-6">
+                           <h3 class="types_text">{{ Name }}</h3>
+                           <div class="bbrick_img">
+                              <a href="/bearbrick/detail/{{_id}}"> <img src="{{Image}}"></a>
 
-            <!-- contact section end -->
-            <!-- footer section start -->
-            <div class="footer_section layout_padding">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <h1 class="address_text">Address</h1>
-                        <p class="footer_text">here, content here', making it look like readable English. Many
-                           desktop publishing
-                           packages and web page editors now use </p>
-                        <div class="location_text">
-                           <ul>
-                              <li>
-                                 <a href="#">
-                                    <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">+01
-                                       1234567890</span>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i><span
-                                       class="padding_left_10">demo@gmail.com</span>
-                                 </a>
-                              </li>
-                           </ul>
+                           </div>
+                           <h3 class="types_text">{{ Brand }}</h3>
+                           <h3 class="types_text">$ {{ Price}}</h3>
+                           <div class="read_bt"><a href="">Add To Cart</a></div>
                         </div>
+                        {{/each}}
+
+                        {{#each gokus }}
+                        <div class="col-lg-3 col-md-6">
+                           <h3 class="types_text">{{ Name }}</h3>
+                           <div class="bbrick_img">
+                              <a href="/goku/detail/{{_id}}"> <img src="{{Image}}"></a>
+
+                           </div>
+                           <h3 class="types_text">{{ Brand }}</h3>
+                           <h3 class="types_text">$ {{ Price}}</h3>
+                           <div class="read_bt"><a href="">Add To Cart</a></div>
+                        </div>
+                        {{/each}}
                      </div>
                   </div>
                </div>
+
+               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                  <i class="fa fa-arrow-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                  <i class="fa fa-arrow-right"></i>
+               </a>
             </div>
-            <!-- footer section end -->
-            <!-- copyright section start -->
-            <div class="copyright_section">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-lg-6 col-sm-12">
-                        <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free
-                              Html Templates</a></p>
+         </div>
+      </div>
+      <div class="blog_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="about_taital">Introduce Bearbrick</h1>
+               </div>
+            </div>
+            <div class="blog_section_2">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="blog_box">
+                        <div class="blog_img"><img src="images/bb13.png"></div>
+                        <h4 class="prep_text">Bearbrick Jean-Michel</h4>
+                        <p class="lorem_text">
+                           ✔ Guaranteed 100% genuine, if found fake, refund 2 times the order value
+                           ✔ Free return and exchange within 45 days (click to see details)
+                           ✔ Free 1-year warranty on the entire system (click to see details)</p>
                      </div>
-                     <div class="col-lg-6 col-sm-12">
-                        <div class="footer_social_icon">
-                           <ul>
-                              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                           </ul>
-                        </div>
+                     <div class="read_bt"><a href="#">Add To Cart</a></div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="blog_box">
+                        <div class="blog_img"><img src="images/bb15.png"></div>
+                        <h4 class="prep_text">Bearbrick Oculus Orbus</h4>
+                        <p class="lorem_text">
+                           ✔ Guaranteed 100% genuine, if found fake, refund 2 times the order value
+                           ✔ Free return and exchange within 45 days (click to see details)
+                           ✔ Free 1-year warranty on the entire system (click to see details)</p>
                      </div>
+                     <div class="read_bt"><a href="#">Add To Cart</a></div>
                   </div>
                </div>
             </div>
-            <!-- copyright section end -->
-            <!-- Javascript files-->
-            <script src="js/jquery.min.js"></script>
-            <script src="js/popper.min.js"></script>
-            <script src="js/bootstrap.bundle.min.js"></script>
-            <script src="js/jquery-3.0.0.min.js"></script>
-            <script src="js/plugin.js"></script>
-            <!-- sidebar -->
-            <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-            <script src="js/custom.js"></script>
+         </div>
+      </div>
+      <!-- blog section end -->
+      <!-- contact section start -->
+
+      <!-- contact section end -->
+      <!-- footer section start -->
+
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6 col-sm-12">
+                  <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free Html
+                        Templates</a></p>
+               </div>
+               <div class="col-lg-6 col-sm-12">
+                  <div class="footer_social_icon">
+                     <ul>
+                        <li><a href="https://www.facebook.com/nyguuyenhung/"><i class="fa fa-facebook"
+                                 aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/apdehanni_/"><i class="fa fa-instagram"
+                                 aria-hidden="true"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
 </body>
 
 </html>
